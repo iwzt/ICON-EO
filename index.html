@@ -104,7 +104,6 @@
     <div class="grid m-4 md:m-6 lg:m-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-10 border-t border-l">
       <template x-for="(item, index) in filteredIcons" :key="index">
         <a href="" x-bind:href="
-        '.' +
         document.location.host +
         `/images/icons/` +
         item.icon_path +
@@ -160,7 +159,6 @@
           if (downloadType === "copy-svg") {
             event.preventDefault();
             var url = 
-              "." +
               document.location.host +
               `/images/icons/` +
               item.icon_path +
@@ -178,7 +176,6 @@
           if (downloadType === "copy-cdn") {
             event.preventDefault();
             var url =
-              "." +
               document.location.host +
               `/images/icons/` +
               item.icon_path +
