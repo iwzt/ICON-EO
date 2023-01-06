@@ -104,7 +104,7 @@
     <div class="grid m-4 md:m-6 lg:m-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-10 border-t border-l">
       <template x-for="(item, index) in filteredIcons" :key="index">
         <a href="" x-bind:href="
-        document.location.host +
+        document.location.host +'ICON-EO'
         `/images/icons/` +
         item.icon_path +
         `.svg`" x-bind:download="downloadType === 'download-svg' && item.icon_name" class="relative flex flex-col items-center justify-center h-32 p-2 text-gray-700 duration-150 ease-in-out bg-white border-r border-b cursor-pointer group hover:z-10 hover:shadow-xl md:h-40" @click="handleClick(item, downloadType, $event, $dispatch)">
@@ -159,7 +159,7 @@
           if (downloadType === "copy-svg") {
             event.preventDefault();
             var url = 
-              document.location.host +
+              document.location.host +'ICON-EO'
               `/images/icons/` +
               item.icon_path +
               `.svg`;
@@ -176,7 +176,7 @@
           if (downloadType === "copy-cdn") {
             event.preventDefault();
             var url =
-              document.location.host +
+              document.location.host +'ICON-EO/'
               `/images/icons/` +
               item.icon_path +
               `.svg`;
